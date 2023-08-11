@@ -41,6 +41,24 @@ ggplot(data = starwars, aes(x = height))+
 
 ```{r}
 ggplot(data = starwars, aes(x=height,y=mass, color = species))+
-  geom_point(shape = 4)+
+  geom_point(shape = 8)+
   theme_minimal()
+```
+
+## Calculate Summary Statistics
+
+use mean() function to find means.
+
+Use sd() function to find standard deviations.
+
+```{r}
+mean_height <- mean(starwars$height)
+#shows up as NA because some heights are NA, default in mean() is na.rm = FALSE
+mean_height <- mean(starwars$height, na.rm = TRUE)
+```
+
+Find and store the standard deviation of character heights
+
+```{r}
+sd_height <- sd(starwars$height, na.rm = TRUE)
 ```
