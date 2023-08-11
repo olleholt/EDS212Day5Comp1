@@ -1,0 +1,7 @@
+---
+title: "Day5Comp1"
+format: html
+editor: visual
+---
+
+## Probability
