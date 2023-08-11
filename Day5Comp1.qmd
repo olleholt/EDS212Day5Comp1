@@ -1,7 +1,46 @@
 ---
 title: "Day5Comp1"
-format: html
+format: 
+  html:
+    code-fold: true
+    code-summary: "Show me the code!"
 editor: visual
+execute:
+  echo: true
+  warning: false
 ---
 
 ## Probability
+
+```{r}
+library(tidyverse)
+```
+
+## Explore the starwars dataset
+
+-   look at the first 6 lines of starwars
+
+-   find the dimensions of starwars
+
+-   make a histogram of character heights
+
+-   make a scatterplot of height vs weight
+
+```{r}
+head(starwars)
+```
+
+```{r}
+dim(starwars)
+```
+
+```{r}
+ggplot(data = starwars, aes(x = height))+
+  geom_histogram()
+```
+
+```{r}
+ggplot(data = starwars, aes(x=height,y=mass, color = species))+
+  geom_point(shape = 4)+
+  theme_minimal()
+```
